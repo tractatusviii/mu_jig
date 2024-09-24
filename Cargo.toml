@@ -1,14 +1,22 @@
 [package]
-name    = "u-jig"
+name    = "mu_jig"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
 
 [lib]
 name = "mu_jig"
 path = "src/lib.rs"
 
 [[bin]]
-name = "my_binary"
+name = "mu_jig"
 path = "src/main.rs"
+
+
+members = [
+    "my_binary",
+    "pdbtbx"
+]
+
+[dependencies]
+pdbtbx = { path = "../pdbtbx" }

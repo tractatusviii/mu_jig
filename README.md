@@ -1,6 +1,9 @@
 https://mmcif.wwpdb.org/
 
-https://github.com/openmm/pdbfixer
+
+There are two problems with the pdb/mmcif that could use immediate improvement: 
+1. chemical completeness  (See https://github.com/openmm/pdbfixer)
+2. and biological modularity (classification and access)
 
 
 ## Gameplan

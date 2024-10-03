@@ -28,10 +28,22 @@ impl std::fmt::Display for EntryType {
     }
 }
 
+impl EntryType {
+    const MOLECULE_STR: &'static str = "MOLECULE";
+    const ATOM_STR    : &'static str = "ATOM";
+
+    fn as_str(&self) -> &'static str {
+        match self {
+            EntryType::MOLECULE => Self::MOLECULE_STR,
+            EntryType::ATOM => Self::ATOM_STR,
+        }
+    }
+}
+
 fn parse_entry_type(input: &str) -> IResult<&str, EntryType> {
     alt((
-        map(tag("MOLECULE"), |_| EntryType::MOLECULE),
-        map(tag("ATOM"), |_| EntryType::ATOM),
+        map(tag(EntryType::MOLECULE.as_str()), |_| EntryType::MOLECULE),
+        map(tag(EntryType::ATOM.as_str()), |_| EntryType::ATOM),
     ))(input)
 }
 

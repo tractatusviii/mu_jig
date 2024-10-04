@@ -101,27 +101,4 @@ fn parse_optional_u32(input: &str) -> IResult<&str, Option<u32>> {
 // }
 
 
-fn parse_input(input: &str) -> IResult<&str, &str> {
-    //  note that this is really creating a function, the parser for abc
-    //  vvvvv 
-    //         which is then called here, returning an IResult<&str, &str>
-    //         vvvvv
-    tag("ATOM")(input)
-}
-
-fn main() {
-
-    let input = "ATOM   1     N N     . ALA A  1  2    ? 185.986 228.605 206.762 1.00 4.58   ? 1    ALA 0 N     1 ";
-
-
-    match parse_input(input){
-        Err(e) => println!("Error parsing input: {:?}", e),
-        Ok((_, _)) => println!("Parsed input"),
-    };
-    ()
-    // match parse_atom_site(input) {
-    //     Ok((_, atom_site)) => println!("Parsed AtomSite: {:#?}", atom_site),
-    //     Err(e) => println!("Error parsing input: {:?}", e),
-    // }
-}
 

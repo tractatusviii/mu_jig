@@ -1,15 +1,19 @@
 https://mmcif.wwpdb.org/
 
-
-There are two problems with the pdb/mmcif that could use immediate improvement: 
+Things i'd like to improve upon (on mmcif).
 1. chemical completeness  (See https://github.com/openmm/pdbfixer)
-2. and biological modularity (classification and access)
+2. biological modularity (classification and access)
+3. 
 
 
-## Gameplan
+TODO:
 
-TODO: read the mmcif format specification
-TODO: read more of Matteo's answers on the matter on BSO?
+### Read the mmcif format specification
+https://mmcif.wwpdb.org/docs/user-guide/guide.html
+
+### In parallel Articulate what you'd like to see that's missing in the current infrastructrue
+
+
 
 Confine ourselves only to fields of the mmcif format that are relevant to specifying:
 
@@ -36,3 +40,10 @@ Confine ourselves only to fields of the mmcif format that are relevant to specif
 
 - models:
     - metadata
+
+
+
+## Random cif shit:
+
+https://github.com/scipion-em/scipion-em-atomstructutils
+https://github.com/PDB-REDO/cif-tools
